@@ -40,3 +40,7 @@ export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
 `;
+
+export const OptionContent = styled.p`
+  padding: 10px 20px;
+`;

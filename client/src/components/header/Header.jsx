@@ -19,6 +19,7 @@ import {
   OptionsContainer,
   HeaderContainer,
   LogoContainer,
+  OptionContent,
 } from "./HeaderStyle";
 
 function Header({ currentUser, hidden, signOutStart }) {
@@ -37,6 +38,9 @@ function Header({ currentUser, hidden, signOutStart }) {
         ) : (
           <OptionLink to="/signin">SIGN IN</OptionLink>
         )}
+        {currentUser ? (
+          <OptionContent>Welcome, {currentUser.displayName}</OptionContent>
+        ) : null}
         <CartIcon />
       </OptionsContainer>
       {hidden ? null : <CartDropdown />}
